@@ -30,6 +30,8 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>postinstall_script</key>
+			<string>installer -pkg /Applications/Daylite.app/Contents/Resources/Packages/InstallDMA.pkg -target /</string>
 
 		</dict>
 	</dict>

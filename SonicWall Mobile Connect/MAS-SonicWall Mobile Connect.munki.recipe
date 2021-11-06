@@ -23,7 +23,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Track your steps with your Fitbit.</string>
+			<string>Connect to your office network with an SSL VPN connection.</string>
 			<key>developer</key>
 			<string></string>
 			<key>display_name</key>

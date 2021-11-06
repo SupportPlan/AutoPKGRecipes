@@ -29,6 +29,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Collabaration</string>
 			<key>description</key>
 			<string>Cloud platform for video and audio conferencing, chat, and webinars across mobile, desktop, and room systems.</string>
 			<key>developer</key>

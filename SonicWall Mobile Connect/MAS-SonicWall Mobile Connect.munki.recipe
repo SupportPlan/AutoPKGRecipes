@@ -22,6 +22,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Collabaration</string>
 			<key>description</key>
 			<string>Connect to your office network with an SSL VPN connection.</string>
 			<key>developer</key>

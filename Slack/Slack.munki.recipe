@@ -20,6 +20,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Collabaration</string>
 			<key>description</key>
 			<string>Collaborative communication app.</string>
 			<key>developer</key>

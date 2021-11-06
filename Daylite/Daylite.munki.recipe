@@ -20,6 +20,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Collabaration</string>
 			<key>description</key>
 			<string>Dynamic business organization tool kit.</string>
 			<key>developer</key>

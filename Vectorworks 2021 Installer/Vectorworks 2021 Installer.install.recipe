@@ -28,7 +28,7 @@
 				<array>
 					<dict>
 						<key>destination_path</key>
-						<string>/Users/Shared</string>
+						<string>~/Downlaods</string>
 						<key>source_item</key>
 						<string>Vectorworks 2021 Installer.app</string>
 					</dict>

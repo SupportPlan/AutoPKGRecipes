@@ -34,6 +34,13 @@
 			<string>/Users/Shared</string>
 		</dict>
 	</dict>
+	<key>items_to_copy</key>
+	<array>
+		<dict>
+			<key>destination_path</key>
+			<string>/Users/Shared</string>
+		</dict>
+	</array>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>

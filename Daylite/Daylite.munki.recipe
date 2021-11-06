@@ -32,8 +32,7 @@
 			<true/>
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
-installer -pkg /Applications/Daylite.app/Contents/Resources/Packages/InstallDMA.pkg -target /
-			</string>
+installer -pkg /Applications/Daylite.app/Contents/Resources/Packages/InstallDMA.pkg -target /</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

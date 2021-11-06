@@ -28,7 +28,7 @@
 				<array>
 					<dict>
 						<key>destination_path</key>
-						<string>/Applications</string>
+						<string>~/Downloads</string>
 						<key>source_item</key>
 						<string>Vectorworks 2019 Installer.app</string>
 					</dict>

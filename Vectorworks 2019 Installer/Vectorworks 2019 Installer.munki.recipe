@@ -30,6 +30,8 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>destination_path</key>
+			<string>/Users/Shared</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

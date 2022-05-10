@@ -22,6 +22,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>iLife</string>
 			<key>description</key>
 			<string>Apple's presentation designer from the iWork suite.</string>
 			<key>developer</key>

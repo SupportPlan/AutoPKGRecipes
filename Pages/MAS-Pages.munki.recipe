@@ -22,10 +22,12 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>iLife</string>
 			<key>description</key>
 			<string>Apple's word processor for your iOS device.</string>
 			<key>developer</key>
-			<string></string>
+			<string>Apple</string>
 			<key>display_name</key>
 			<string>Pages</string>
 			<key>name</key>

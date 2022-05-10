@@ -22,10 +22,12 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>iLife</string>
 			<key>description</key>
 			<string>Apple's spreadsheet application for your iOS device.</string>
 			<key>developer</key>
-			<string></string>
+			<string>Apple</string>
 			<key>display_name</key>
 			<string>Numbers</string>
 			<key>name</key>

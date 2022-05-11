@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Keynote</string>
+		<string>iLife_Keynote</string>
 		<key>PATH</key>
 		<string>/Applications/Keynote.app</string>
 		<key>pkginfo</key>
@@ -29,7 +29,7 @@
 			<key>developer</key>
 			<string></string>
 			<key>display_name</key>
-			<string>Keynote</string>
+			<string>iLife_Keynote</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>

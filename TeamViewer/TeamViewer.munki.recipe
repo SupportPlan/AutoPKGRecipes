@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Install TeamViewer and imports it into Munki.</string>
+	<string>Downloads the latest version of TeamViewer and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.munki.InstallTeamViewer</string>
+	<string>supportplan.munki.TeamViewer</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Install TeamViewer</string>
+		<string>TeamViewer</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.download.InstallTeamViewer</string>
+	<string>supportplan.download.TeamViewer</string>
 	<key>Process</key>
 	<array>
 		<dict>

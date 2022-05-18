@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Install TeamViewer.</string>
 	<key>Identifier</key>
-	<string>supportplan.download.InstallTeamViewer</string>
+	<string>supportplan.download.TeamViewer</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

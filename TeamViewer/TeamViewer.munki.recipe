@@ -25,7 +25,7 @@
 			<key>developer</key>
 			<string>TeamViewer Germany GmbH</string>
 			<key>display_name</key>
-			<string>Install TeamViewer</string>
+			<string>TeamViewer</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>

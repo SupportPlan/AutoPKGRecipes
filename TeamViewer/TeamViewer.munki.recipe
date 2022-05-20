@@ -32,7 +32,8 @@
 			<true/>
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
-		installer -pkg /Volumes/TeamViewer/Install\ TeamViewer.app/Contents/Resources/Install\ TeamViewer.pkg -target /
+		installer -pkg /Applications/Install\ TeamViewer.app/Contents/Resources/Install\ TeamViewer.pkg -target /
+		rm -rf /Applications/Install\ TeamViewer.app
 		</string>
 		</dict>
 	</dict>

@@ -53,6 +53,14 @@
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
+			<key>Arguments</key>
+				<dict>
+					<key>additional_pkginfo</key>
+						<dict>
+						<key>version</key>
+						<string>%version%</string>
+					</dict>
+				</dict>
 		</dict>
 	</array>
 </dict>

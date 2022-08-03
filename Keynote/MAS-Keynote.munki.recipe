@@ -27,7 +27,7 @@
 			<key>description</key>
 			<string>Apple's presentation designer from the iWork suite.</string>
 			<key>developer</key>
-			<string></string>
+			<string>Apple</string>
 			<key>display_name</key>
 			<string>iLife_Keynote</string>
 			<key>name</key>

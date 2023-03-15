@@ -10,6 +10,8 @@
 	<string>supportplan.com.pkg.NTFSforMac</string>
 	<key>Input</key>
 	<dict>
+		<key>DERIVE_MIN_OS</key>
+		<string>YES</string>
 		<key>NAME</key>
 		<string>NTFS for Mac</string>
 	</dict>

@@ -32,6 +32,7 @@
             <string>%NAME%</string>
             <key>minimum_os_version</key>
             <string>10.14.0</string>
+        </dict>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>

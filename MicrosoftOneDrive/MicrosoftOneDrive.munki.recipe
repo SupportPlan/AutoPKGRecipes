@@ -35,34 +35,32 @@
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
 
-				USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
+			USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
 
 
-				for USER in $USERS; do
-				who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" && {
-				profiledir="$(dscacheutil -q user -a name $USER | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "dir" | cut -c6-)"
-				defaults write $profiledir/Library/Preferences/com.microsoft.OneDriveUpdater.plist Tier "Deferred"
+			for USER in $USERS; do
+				who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" &amp;&amp; {
+					profiledir="$(dscacheutil -q user -a name $USER | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "dir" | cut -c6-)"
+					defaults write $profiledir/Library/Preferences/com.microsoft.OneDriveUpdater.plist Tier "Deferred"
 				} || {
-				:
+					:
 				}
-				done
-			</string>
+			done</string>
 			<key>installcheck_script</key>
 			<string>#!/bin/bash
 
-				USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
+		USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
 
 
-				for USER in $USERS; do
-				who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" && {
+		for USER in $USERS; do
+			who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" &amp;&amp; {
 				echo "$USER is logged in"
 				exit 0
-				} || {
+			} || {
 				echo "$USER is not logged in"
-				}
-				done
-				exit 1
-			</string>
+			}
+		done
+		exit 1</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

@@ -37,9 +37,10 @@
 
 		USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
 		IV=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "/Applications/OneDrive.app/Contents/Info.plist")
-
+		NV=%version%
+		
 		if [ -f "/Applications/OneDrive.app/Contents/Info.plist" ]; then
-			if [[ "$IV" -ge "%version%" ]]; then
+			if [[ "$IV" -ge "$NV" ]]; then
 				:
 			else
 				exit 1

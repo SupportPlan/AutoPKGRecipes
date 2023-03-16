@@ -8,6 +8,21 @@
     <string>supportplan.com.munki.microsoftonedrive</string>
     <key>ParentRecipe</key>
     <string>supportplan.com.pkg.microsoftonedrive</string>
+	<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiPkginfoMerger</string>
+				<key>Arguments</key>
+				<dict>
+					<key>additional_pkginfo</key>
+					<dict>
+						<key>version</key>
+						<string>%version%</string>
+					</dict>
+				</dict>
+			</dict>
+		</array>
     <key>Input</key>
     <dict>
         <key>NAME</key>

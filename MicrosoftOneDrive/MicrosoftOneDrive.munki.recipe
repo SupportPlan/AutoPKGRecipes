@@ -40,7 +40,7 @@
 		NV=%version%
 		
 		if [ -f "/Applications/OneDrive.app/Contents/Info.plist" ]; then
-			if [[ "$IV" -ge "$NV" ]]; then
+			if (( $(echo "$IV > $NV" |bc -l) )); then
 				:
 			else
 				exit 1

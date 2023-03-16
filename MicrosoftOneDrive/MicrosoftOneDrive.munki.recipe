@@ -32,6 +32,37 @@
             <string>%NAME%</string>
             <key>minimum_os_version</key>
             <string>10.14.0</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+
+				USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
+
+
+				for USER in $USERS; do
+				who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" && {
+				profiledir="$(dscacheutil -q user -a name $USER | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "dir" | cut -c6-)"
+				defaults write $profiledir/Library/Preferences/com.microsoft.OneDriveUpdater.plist Tier "Deferred"
+				} || {
+				:
+				}
+				done
+			</string>
+			<key>installcheck_script</key>
+			<string>#!/bin/bash
+
+				USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
+
+
+				for USER in $USERS; do
+				who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" && {
+				echo "$USER is logged in"
+				exit 0
+				} || {
+				echo "$USER is not logged in"
+				}
+				done
+				exit 1
+			</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

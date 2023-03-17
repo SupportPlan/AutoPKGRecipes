@@ -115,6 +115,7 @@ class specialcurl(URLGetter):
             "--speed-time",
             "30",
             "--location",
+            self.env["curl_opts"]
             "--url",
             self.env["url"],
         ]
@@ -130,8 +131,6 @@ class specialcurl(URLGetter):
         """Assemble file download curl command and return it."""
         curl_cmd = self.prepare_base_curl_cmd()
         curl_cmd.extend(["--fail", "--output", pathname_temporary])
-        for op in self.env["curl_opts"]:
-            curl_cmd.extend([op])
         # Add the common options
         self.add_curl_common_opts(curl_cmd)
         # Clear out a potentially zero-byte file

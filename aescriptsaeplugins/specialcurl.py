@@ -111,7 +111,6 @@ class specialcurl(URLGetter):
             "--show-error",
             "--no-buffer",
             "--dump-header",
-            "-",
             "--speed-time",
             "30",
             "--location",

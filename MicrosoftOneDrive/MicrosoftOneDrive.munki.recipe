@@ -47,44 +47,39 @@
             <string>%NAME%</string>
             <key>minimum_os_version</key>
             <string>10.14.0</string>
-			<key>installcheck_script</key>
-			<string>#!/bin/bash
-
-		USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
-		IV=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "/Applications/OneDrive.app/Contents/Info.plist")
-		NV=%version%
-		
-		if [ -f "/Applications/OneDrive.app/Contents/Info.plist" ]; then
-			if (( $(echo "$IV > $NV" |bc -l) )); then
-				:
-			else
-				exit 1
-			fi
-		fi
-
-		for USER in $USERS; do
-			who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" &amp;&amp; {
-				echo "$USER is logged in"
-				exit 0
-			} || {
-				echo "$USER is not logged in"
-			}
-		done
-		exit 1</string>
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
 
-		USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
+				USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
 
 
-		for USER in $USERS; do
-			who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" &amp;&amp; {
-				profiledir="$(dscacheutil -q user -a name $USER | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "dir" | cut -c6-)"
-				defaults write $profiledir/Library/Preferences/com.microsoft.OneDriveUpdater.plist Tier "Deferred"
-			} || {
-				:
-			}
-		done</string>
+				for USER in $USERS; do
+					who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" &amp;&amp; {
+						open -a /Applications/OneDrive.app
+						sleep 10
+						profiledir="$(dscacheutil -q user -a name $USER | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "dir" | cut -c6-)"
+						defaults write $profiledir/Library/Preferences/com.microsoft.OneDriveUpdater.plist Tier -string "Deferred"
+						defaults write $profiledir/Library/Preferences/com.microsoft.OneDrive.plist DisableAutoUpdate true
+						defaults write $profiledir/Library/Preferences/com.microsoft.OneDrive.plist Tier -string "Deferred"
+					} || {
+						:
+					}
+				done</string>
+				<key>preinstall_script</key>
+				<string>#!/bin/bash
+
+				USERS=$(dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' | grep "name" | cut -c7-)
+
+				for USER in $USERS; do
+					who | awk '{print $1}' | sort | uniq | grep -q "^$USER\$" &amp;&amp; {
+						echo "$USER is logged in"
+						killall OneDrive || :
+						exit 0
+					} || {
+						echo "$USER is not logged in"
+					}
+				done
+				exit 1</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

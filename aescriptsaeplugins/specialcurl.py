@@ -10,10 +10,10 @@ __all__ = ["specialcurl"]
 
 
 class specialcurl(Processor):
-    """Unpacks a package payload."""
+    """Downloads using a header."""
 
     input_variables = {
-        "Referer": {
+        "header": {
             "required": True,
             "description": (
                 "The referer url"
@@ -36,7 +36,7 @@ class specialcurl(Processor):
                 "/usr/bin/curl",
                 "-L",
                 "-H",
-                self.env["Referer"],
+                self.env["header"],
                 self.env["url"],
                 "-o",
                 self.env["filename"]

@@ -112,7 +112,7 @@ class specialcurl(URLGetter):
             "--no-buffer",
             "--dump-header",
             "-",
-            "--header 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'",
+            "-H 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'",
             "--speed-time",
             "30",
             "--location",

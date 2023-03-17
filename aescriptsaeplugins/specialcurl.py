@@ -113,7 +113,6 @@ class specialcurl(URLGetter):
             "--silent",
             "--show-error",
             "--no-buffer",
-            "-",
             "--speed-time",
             "30",
             "--location",

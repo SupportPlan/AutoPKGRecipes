@@ -107,7 +107,9 @@ class specialcurl(URLGetter):
         """Assemble base curl command and return it."""
         curl_cmd = [
             self.curl_binary(),
-            "-L -H 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'",
+            "-L",
+            "-H",
+            "'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'",
             "--silent",
             "--show-error",
             "--no-buffer",

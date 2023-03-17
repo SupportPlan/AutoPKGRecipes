@@ -26,8 +26,8 @@
 				<string>https://updates.aescripts.com/updater/mac/aescripts%20+%20aeplugins%20manager%20(setup).dmg</string>
 				<key>curl_opts</key>
 				<array>
-					<string>L</string>
-					<string>H 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'</string>
+					<string>-L</string>
+					<string>-H 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'</string>
 				</array>
 			</dict>
 			<key>Processor</key>

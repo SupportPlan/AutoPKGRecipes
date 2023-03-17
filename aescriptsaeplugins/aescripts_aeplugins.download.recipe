@@ -24,11 +24,11 @@
 				<string>%NAME%.dmg</string>
 				<key>url</key>
 				<string>https://updates.aescripts.com/updater/mac/aescripts%20+%20aeplugins%20manager%20(setup).dmg</string>
-				<key>header</key>
-				<string>Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/</string>
+				<key>curl_opts</key>
+				<string>-L -H 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'</string>
 			</dict>
 			<key>Processor</key>
-			<string>specialcurl</string>
+			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>

@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.aescripts+aeplugins</string>
+	<string>supportplan.com.download.aescriptsPlusaeplugins</string>
 	<key>Process</key>
 	<array>
 		<dict>

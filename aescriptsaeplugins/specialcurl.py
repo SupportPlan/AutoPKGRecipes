@@ -115,7 +115,7 @@ class specialcurl(URLGetter):
             "--speed-time",
             "30",
             "--location",
-            self.env["curl_opts"]
+            self.env["curl_opts"],
             "--url",
             self.env["url"],
         ]

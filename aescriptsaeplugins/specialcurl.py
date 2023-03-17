@@ -111,10 +111,11 @@ class specialcurl(URLGetter):
             "--show-error",
             "--no-buffer",
             "--dump-header",
+            "-",
+            "-H 'Referer: https://aescripts.com/learn/aescripts-aeplugins-manager-app/'",
             "--speed-time",
             "30",
             "--location",
-            self.env["curl_opts"],
             "--url",
             self.env["url"],
         ]

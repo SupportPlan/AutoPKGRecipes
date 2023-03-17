@@ -130,7 +130,7 @@ class specialcurl(URLGetter):
         """Assemble file download curl command and return it."""
         curl_cmd = self.prepare_base_curl_cmd()
         curl_cmd.extend(["--fail", "--output", pathname_temporary])
-        for op in self.evn["curl_opts"]:
+        for op in self.env["curl_opts"]:
             curl_cmd.extend([op])
         # Add the common options
         self.add_curl_common_opts(curl_cmd)

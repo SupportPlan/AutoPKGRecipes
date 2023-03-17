@@ -19,7 +19,7 @@ class specialcurl(Processor):
                 "The referer url"
             ),
         },
-        "destination_path": {"required": True, "description": "Destination directory."},
+        "filename": {"required": True, "description": "Destination directory."},
         "url": {
             "required": True,
             "description": (
@@ -39,7 +39,7 @@ class specialcurl(Processor):
                 self.env["Referer"],
                 self.env["url"],
                 "-o",
-                self.env["destination_path"]
+                self.env["filename"]
             ]
             proc = subprocess.Popen(
                 ccmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True

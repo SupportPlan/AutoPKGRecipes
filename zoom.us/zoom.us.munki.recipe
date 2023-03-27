@@ -41,6 +41,11 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+		sudo cp -R /Applications/zoom.us.app/Contents/PlugIns/ZoomAudioDevice.driver /Library/Audio/Plug-Ins/HAL/
+		sudo killall coreaudiod
+		</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

@@ -7,18 +7,18 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Tunnelblick and creates a package.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.pkg.Tunnelblick</string>
+	<string>supportplan.com.pkg.TunnelblickBeta</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>net.tunnelblick.tunnelblick</string>
+		<string>net.tunnelblick.TunnelblickBeta</string>
 		<key>NAME</key>
-		<string>Tunnelblick</string>
+		<string>TunnelblickBeta</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.Tunnelblick</string>
+	<string>supportplan.com.download.TunnelblickBeta</string>
 	<key>Process</key>
 	<array>
 		<dict>

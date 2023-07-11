@@ -5,11 +5,11 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Tunnelblick.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.download.Tunnelblick</string>
+	<string>supportplan.com.download.TunnelblickBeta</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Tunnelblick</string>
+		<string>TunnelblickBeta</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>

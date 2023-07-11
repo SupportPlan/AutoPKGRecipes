@@ -19,7 +19,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>iprelease/Tunnelblick_(?P&lt;version&gt;[\d\.]+beta[0-9])_build_(?P&lt;build&gt;[\d\.]+)\.dmg</string>
+				<string>iprelease/Tunnelblick_(?P&lt;version&gt;[\d\.]+)beta[0-9]+_build_(?P&lt;build&gt;[\d\.]+)\.dmg</string>
 				<key>url</key>
 				<string>https://tunnelblick.net/downloads.html</string>
 			</dict>

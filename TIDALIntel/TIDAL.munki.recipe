@@ -30,6 +30,10 @@
 			<string>Tidal</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>supported_architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

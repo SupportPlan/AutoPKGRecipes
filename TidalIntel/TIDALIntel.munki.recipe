@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of TIDAL and imports it into Munki.</string>
+	<string>Downloads the latest version of Tidal and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.munki.TIDALIntel</string>
+	<string>supportplan.com.munki.TidalIntel</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>TIDAL</string>
+		<string>Tidal</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -23,9 +23,9 @@
 			<key>description</key>
 			<string> </string>
 			<key>developer</key>
-			<string>TIDAL Music AS</string>
+			<string>Tidal Music AS</string>
 			<key>display_name</key>
-			<string>TIDAL</string>
+			<string>Tidal</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.TIDALIntel</string>
+	<string>supportplan.com.download.TidalIntel</string>
 	<key>Process</key>
 	<array>
 		<dict>

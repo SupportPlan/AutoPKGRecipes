@@ -5,18 +5,18 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Installs the latest version of Tidal.</string>
+	<string>Installs the latest version of TIDAL.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.install.TidalArm</string>
+	<string>supportplan.com.install.TIDALArm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Tidal</string>
+		<string>TIDAL</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.TidalArm</string>
+	<string>supportplan.com.download.TIDALArm</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -30,7 +30,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>Tidal.app</string>
+						<string>TIDAL.app</string>
 					</dict>
 				</array>
 			</dict>

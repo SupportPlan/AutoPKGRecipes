@@ -32,7 +32,7 @@
 			<true/>
 			<key>supported_architectures</key>
 			<array>
-				<string>x68_64</string>
+				<string>x86_64</string>
 			</array>
 		</dict>
 	</dict>

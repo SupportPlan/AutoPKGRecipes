@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of TIDAL and imports it into Munki.</string>
+	<string>Downloads the latest version of Tidal and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.munki.TIDALArm</string>
+	<string>supportplan.com.munki.TidalArm</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>TIDALArm</string>
+		<string>TidalArm</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,13 +21,13 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>TIDAL is the first music service with High Fidelity sound quality, High Definition music videos and Curated Editorial, expertly crafted by music journalists.</string>
 			<key>developer</key>
-			<string>TIDAL Music AS</string>
+			<string>Tidal Music AS</string>
 			<key>display_name</key>
-			<string>TIDAL</string>
+			<string>Tidal</string>
 			<key>name</key>
-			<string>TIDAL</string>
+			<string>Tidal</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.TIDALArm</string>
+	<string>supportplan.com.download.TidalArm</string>
 	<key>Process</key>
 	<array>
 		<dict>

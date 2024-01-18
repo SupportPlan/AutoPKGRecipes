@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/Tidal</string>
 		<key>NAME</key>
 		<string>TIDAL_x64</string>
 		<key>pkginfo</key>
@@ -25,9 +25,9 @@
 			<key>developer</key>
 			<string>TIDAL Music AS</string>
 			<key>display_name</key>
-			<string>%NAME%</string>
+			<string>TIDAL_x64</string>
 			<key>name</key>
-			<string>%NAME%</string>
+			<string>TIDAL_x64</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>

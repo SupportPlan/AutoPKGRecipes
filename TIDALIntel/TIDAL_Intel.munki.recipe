@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of TIDAL and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.munki.TIDALARM</string>
+	<string>com.supportplan.munki.TIDAL</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>TIDALARM</string>
+		<string>TIDAL</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,25 +21,21 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>High-fidelity music streaming.</string>
 			<key>developer</key>
 			<string>TIDAL Music AS</string>
 			<key>display_name</key>
 			<string>TIDAL</string>
 			<key>name</key>
-			<string>Tidal</string>
+			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>supported_architectures</key>
-			<array>
-				<string>arm64</string>
-			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.TIDALARM</string>
+	<string>com.supportplan.download.TIDAL</string>
 	<key>Process</key>
 	<array>
 		<dict>

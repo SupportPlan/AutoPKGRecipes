@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>TIDAL</string>
+		<string>TIDAL_ARM</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>

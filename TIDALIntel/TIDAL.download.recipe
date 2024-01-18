@@ -14,7 +14,7 @@
 		<string>TIDAL</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>3.36.0</string>
 	<key>Process</key>
 	<array>
 		<dict>

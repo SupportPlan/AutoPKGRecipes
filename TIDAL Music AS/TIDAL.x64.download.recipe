@@ -7,11 +7,11 @@
 	<key>Description</key>
 	<string>Downloads the latest version of TIDAL.</string>
 	<key>Identifier</key>
-	<string>com.supportplan.download.TIDAL.x64</string>
+	<string>com.supportplan.download.TIDAL.Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>TIDAL_x64</string>
+		<string>TIDAL_Intel</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>

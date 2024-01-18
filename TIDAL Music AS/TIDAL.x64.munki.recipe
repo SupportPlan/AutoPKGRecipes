@@ -7,13 +7,13 @@
 	<key>Description</key>
 	<string>Downloads the latest version of TIDAL and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.supportplan.munki.TIDAL.x64</string>
+	<string>com.supportplan.munki.TIDAL.Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/TIDAL</string>
 		<key>NAME</key>
-		<string>TIDAL_x64</string>
+		<string>TIDAL_Intel</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.supportplan.download.TIDAL.x64</string>
+	<string>com.supportplan.download.TIDAL.Intel</string>
 	<key>Process</key>
 	<array>
 		<dict>

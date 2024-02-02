@@ -32,12 +32,12 @@
 			<true/>
 			<key>postinstall_script</key>
 			<string>#!/bin/zsh
-				open -a /Users/Shared/Install\ Spotify.app
+				open -a /Applications/Install\ Spotify.app
 				sleep 5
-				installing=$(fuser -fu /Users/Shared/Install\ Spotify.app/Contents/MacOS/Install\ Spotify)
+				installing=$(fuser -fu /Applications/Install\ Spotify.app/Contents/MacOS/Install\ Spotify)
 				while [ $installing ]; do
 				sleep 1
-				installing=$(fuser -fu /Users/Shared/Install\ Spotify.app/Contents/MacOS/Install\ Spotify)
+				installing=$(fuser -fu /Applications/Install\ Spotify.app/Contents/MacOS/Install\ Spotify)
 				done
 				if [ -d /Applications/Spotify.app ]; then
 				spotify_pid=$(fuser -fu /Applications/Spotify.app/Contents/MacOS/Spotify)
@@ -47,7 +47,7 @@
 				kill $spotify_pid || :
 				mv /Users/*/Applications/Spotify.app /Applications/Spotify.app
 				fi
-				rm -rf /Users/Shared/Install\ Spotify.app
+				rm -rf /Applications/Install\ Spotify.app
 				/bin/chmod -R go+rX /Applications/Spotify.app
 			</string>
 		</dict>

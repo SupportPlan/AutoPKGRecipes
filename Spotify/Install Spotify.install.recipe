@@ -39,7 +39,7 @@
 				<array>
 					<dict>
 						<key>destination_path</key>
-						<string>/Applications</string>
+						<string>/Users/Shared</string>
 						<key>source_item</key>
 						<string>Install Spotify.app</string>
 					</dict>

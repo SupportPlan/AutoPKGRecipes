@@ -25,7 +25,7 @@
 			<key>developer</key>
 			<string>jiaqi liang</string>
 			<key>display_name</key>
-			<string>Effect House</string>
+			<string>Effect House (x86_x64)</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>

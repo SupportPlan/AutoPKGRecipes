@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Slack and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.munki.Slack</string>
+	<string>com.supportplan.munki.Slack</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -20,12 +20,10 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Collabaration</string>
 			<key>description</key>
 			<string>Collaborative communication app.</string>
 			<key>developer</key>
-			<string>Slack Technologies, Inc.</string>
+			<string>Slack Technologies</string>
 			<key>display_name</key>
 			<string>Slack</string>
 			<key>name</key>
@@ -35,9 +33,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.download.Slack</string>
+	<string>com.supportplan.download.Slack</string>
 	<key>Process</key>
 	<array>
 		<dict>

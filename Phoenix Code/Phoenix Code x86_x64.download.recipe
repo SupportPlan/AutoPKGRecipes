@@ -7,11 +7,11 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Phoenix Code.</string>
 	<key>Identifier</key>
-	<string>com.supportplan.download.PhoenixCode</string>
+	<string>com.supportplan.download.PhoenixCode.x86_x64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Phoenix Code</string>
+		<string>Phoenix Code x86_x64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>

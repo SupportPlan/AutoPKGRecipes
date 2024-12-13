@@ -39,7 +39,6 @@
 	<key>ParentRecipe</key>
 	<string>supportplan.pkg.wrappedappstore</string>
 	<key>Process</key>
-	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>

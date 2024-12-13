@@ -139,7 +139,7 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
         else:
             pkgdir = self.env["RECIPE_CACHE_DIR"]
             pkgname = (
-                f"{os.path.splitext(os.path.basename(app_path))[0]}-"
+                f"{os.path.splitext(os.path.basename(app_name))[0]}-"
                 f"{self.env['version']}"
             )
             pkg_path = os.path.join(pkgdir, pkgname + ".pkg")

@@ -98,7 +98,7 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
             raise ProcessorError(f"Can't read {plistpath}: {err}")
         return plist
 
-    def package_app(self, app_path):
+    def package_app(self, app_path, app_name):
         """Build a packaging request, send it to the autopkgserver and get the
         constructed package."""
 
@@ -228,13 +228,16 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
 
     def main(self):
         """Find an app, package it up"""
-        app_name = self.env["app_name"]
         if self.env.get("app_path"):
             app_path = self.env["app_path"]
         elif self.env.get("pathname"):
             app_path = self.env["pathname"] + "/*.app"
         else:
             raise ProcessorError("No app_path or pathname specified.")
+        if self.env.get("app_name"):
+            app_name = self.env["app_name"]
+        else:
+            raise ProcessorError("No app_name specified.")
         # Check if we're trying to package something inside a dmg.
         (dmg_path, dmg, dmg_app_path) = self.parsePathForDMG(app_path)
         try:

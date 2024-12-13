@@ -228,6 +228,7 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
 
     def main(self):
         """Find an app, package it up"""
+        app_name = self.env["app_name"]
         if self.env.get("app_path"):
             app_path = self.env["app_path"]
         elif self.env.get("pathname"):

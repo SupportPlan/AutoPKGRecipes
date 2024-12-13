@@ -88,7 +88,7 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
         },
     }
 
-    def read_info_plist(self, app_path):
+    def read_info_plist(self, app_path, app_name):
         """Read Wrapped/AppName.app/Info.plist from the app."""
         plistpath = os.path.join(app_path, "Wrapper", app_name, "Info.plist")
         try:
@@ -107,7 +107,7 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
             del self.env["app_pkg_creator_summary_result"]
 
         # get version and bundleid
-        infoplist = self.read_info_plist(app_path)
+        infoplist = self.read_info_plist(app_path, app_name)
         if not self.env.get("version"):
             # Default to CFBundleShortVersionString if version_key is unset.
             version_key = self.env.get("version_key", "CFBundleShortVersionString")

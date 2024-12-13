@@ -264,7 +264,7 @@ class WrappedAppPkgCreator(DmgMounter, PkgCreator):
                 )
 
             # do the copy
-            self.package_app(matched_app_path)
+            self.package_app(matched_app_path, app_name)
 
         finally:
             if dmg:

@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Checks for the update of a MAS app.  If the version on disk is up to date, then import into Munki directly.  If out of date, abort. This recipe MUST ONLY be used with an override - do not run this recipe directly. See the documentation here: https://github.com/autopkg/nmcspadden-recipes/#appstoreapp-recipe</string>
     <key>Identifier</key>
-    <string>com.github.nmcspadden.munki.appstore</string>
+    <string>supportplan.munki.wrappedappstore</string>
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>

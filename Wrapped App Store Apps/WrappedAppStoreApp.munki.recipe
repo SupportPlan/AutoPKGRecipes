@@ -72,6 +72,8 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.dmg</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
+				<key>pkginfo</key>
+				<string>%PATH%/Wrapper/%NAME%.app/Info.plist</string>
             </dict>
         </dict>
         <dict>

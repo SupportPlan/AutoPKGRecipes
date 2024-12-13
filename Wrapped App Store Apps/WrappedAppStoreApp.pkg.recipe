@@ -28,11 +28,13 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>AppPkgCreator</string>
+            <string>WrappedAppPkgCreator</string>
             <key>Arguments</key>
             <dict>
                 <key>app_path</key>
                 <string>%PATH%</string>
+				<key>app_name</key>
+				<string>%NAME%.app</string>
             </dict>
         </dict>
     </array>

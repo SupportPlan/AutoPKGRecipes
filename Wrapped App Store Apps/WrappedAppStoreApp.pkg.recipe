@@ -23,7 +23,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>%PATH%/Wrapper/%NAME%/Info.plist</string>
+                <string>%PATH%/Wrapper/%NAME%.app/Info.plist</string>
             </dict>
         </dict>
         <dict>

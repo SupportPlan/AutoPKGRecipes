@@ -20,10 +20,10 @@ import json
 
 from autopkglib import Processor, ProcessorError, URLGetter  # noqa: F401
 
-__all__ = ["LoomArchPicker"]
+__all__ = ["LoomArchPickerARM"]
 
 
-class LoomArchPicker(URLGetter):
+class LoomArchPickerARM(URLGetter):
     """Processor to output the download URL of a specificied Loom architecture."""
 
     description = __doc__

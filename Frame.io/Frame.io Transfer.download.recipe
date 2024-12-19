@@ -5,13 +5,13 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Slack.</string>
+	<string>Downloads the latest version of Frame.io Transfer.</string>
 	<key>Identifier</key>
-	<string>com.supportplan.download.Slack</string>
+	<string>com.supportplan.download.Frame.ioTransfer</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Slack</string>
+		<string>Frame.io Transfer</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://downloads.slack-edge.com/desktop-releases/mac/universal/4.40.133/Slack-4.40.133-macOS.dmg</string>
+				<string>https://transferapp.frame.io/Frame.io-Transfer/6ab0c27d61d7cf8793b0357e6533ed81/latest/darwin/x64/Frame.io+Transfer.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -36,9 +36,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/Slack.app</string>
+				<string>%pathname%/Frame.io Transfer.app</string>
 				<key>requirement</key>
-				<string>(anchor apple generic and certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = BQR82RBBHL) and identifier "com.tinyspeck.slackmacgap"</string>
+				<string>identifier "com.frameio.transfer" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6D429SHX3Y"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -47,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/Slack.app/Contents/Info.plist</string>
+				<string>%pathname%/Frame.io Transfer.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>

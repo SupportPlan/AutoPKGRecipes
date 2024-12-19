@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Frame.io Transfer and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.com.munki.Frame.ioTransfer</string>
+	<string>com.supportplan.munki.Frame.ioTransfer</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -23,7 +23,7 @@
 			<key>description</key>
 			<string>Cloud collaboration and review for Final Cut Pro X.</string>
 			<key>developer</key>
-			<string>Frame.io, Inc.</string>
+			<string>Frame.io</string>
 			<key>display_name</key>
 			<string>Frame.io Transfer</string>
 			<key>name</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.com.download.Frame.ioTransfer</string>
+	<string>com.supportplan.download.Frame.ioTransfer</string>
 	<key>Process</key>
 	<array>
 		<dict>

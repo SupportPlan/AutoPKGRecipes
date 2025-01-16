@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest Loom disk image and builds a package.</string>
+    <key>Identifier</key>
+    <string>supportplan.com.pkg.Loom</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Loom</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>1.0</string>
+    <key>ParentRecipe</key>
+    <string>supportplan.com.download.Loom</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%pathname%/Loom.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleShortVersionString</string>
+            </dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+        </dict>
+        <dict>
+        <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/Loom-%loom_arch%-%version%.pkg</string>
+            </dict>
+            <key>Processor</key>
+            <string>AppPkgCreator</string>
+        </dict>
+    </array>
+</dict>
+</plist>

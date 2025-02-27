@@ -16,6 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>Process</key>
+	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.2 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Topaz Gigapixel AI.</string>
+	<key>Identifier</key>
+	<string>com.supportplan.download.TopazGigapixelAI</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Topaz Gigapixel AI</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.pkg</string>
+				<key>url</key>
+				<string>https://downloads.topazlabs.com/deploy/TopazGigapixelAI/8.2.2/TopazGigapixelAI-8.2.2.pkg?_gl=1*8atdkz*_gcl_au*MzA0ODI5MTQ5LjE3Mzk5NTkxMTk.*_ga*MTE5MzQ4MzY4NS4xNzQwNjU4ODk2*_ga_M0K7E5583S*MTc0MDY1ODg5NS4xLjEuMTc0MDY1OTEwMS42MC4wLjIwMzY0NDYyNTI</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Topaz Labs, LLC (3G3JE37ZHF)</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+				<key>input_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>

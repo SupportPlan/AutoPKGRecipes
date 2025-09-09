@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.4.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Strawberry Client.</string>
+	<key>Identifier</key>
+	<string>com.supportplan.download.StrawberryClient</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Strawberry Client</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>^https:\/\/dlcdn\.projective\.io\/installer\/sb6\/clients\/.*\.pkg(\?.*)?$</string>
+				<key>result_output_var_name</key>
+				<string>downloadlink</string>
+				<key>url</key>
+				<string>https://projective.io/support/product-downloads/</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.pkg</string>
+				<key>url</key>
+				<string>%downloadlink%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Projective Technology GmbH (PT59LR5AQU)</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+				<key>input_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>

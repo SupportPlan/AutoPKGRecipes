@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>^https:\/\/dlcdn\.projective\.io\/installer\/sb6\/clients\/.*\.pkg(\?.*)?$</string>
+				<string>https:\/\/dlcdn\.projective\.io\/installer\/sb6\/clients\/.*\.pkg(\?.*)?</string>
 				<key>result_output_var_name</key>
 				<string>downloadlink</string>
 				<key>url</key>

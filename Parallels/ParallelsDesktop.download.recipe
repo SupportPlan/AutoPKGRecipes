@@ -12,7 +12,7 @@ Input variable tips:
 - For major version 16, set the PLATFORM_ARCH in your override to either "intel" or "m1" depending on your desired architecture.
 </string>
 	<key>Identifier</key>
-	<string>com.github.homebysix.download.ParallelsDesktop</string>
+	<string>com.supportplan.download.ParallelsDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>MAJOR_VERSION</key>

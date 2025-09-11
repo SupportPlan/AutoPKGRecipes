@@ -11,7 +11,7 @@ Input variable tips:
 - For major versions 10 through 15 or 17 through 18, leave the PLATFORM_ARCH blank in your override.
 - For major version 16, set the PLATFORM_ARCH in your override to either "intel" or "m1" depending on your desired architecture.</string>
 	<key>Identifier</key>
-	<string>com.github.homebysix.pkg.ParallelsDesktop</string>
+	<string>com.supportplan.pkg.ParallelsDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
@@ -22,7 +22,7 @@ Input variable tips:
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.download.ParallelsDesktop</string>
+	<string>com.supportplan.download.ParallelsDesktop</string>
 	<key>Process</key>
 	<array>
 		<dict>

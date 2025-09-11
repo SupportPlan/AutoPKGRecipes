@@ -12,7 +12,7 @@ Input variable tips:
 - For major version 16, set the PLATFORM_ARCH in your override to either "intel" or "m1" depending on your desired architecture.
 - Set the DERIVE_MIN_OS variable to a non-empty string to set the minimum_os_version via MunkiInstallsItemsCreator. This requires a minimum AutoPkg version of 2.7 please update if you're not already running it.</string>
 	<key>Identifier</key>
-	<string>com.github.homebysix.munki.ParallelsDesktop</string>
+	<string>com.supportplan.munki.ParallelsDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>DERIVE_MIN_OS</key>
@@ -76,7 +76,7 @@ pkgutil --forget "${pkgReceipt}"
 	<key>MinimumVersion</key>
 	<string>2.7</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.pkg.ParallelsDesktop</string>
+	<string>com.supportplan.pkg.ParallelsDesktop</string>
 	<key>Process</key>
 	<array>
 		<dict>

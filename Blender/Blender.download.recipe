@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Blender. (At least) Since v2.93 you may choose between x64 and arm64 as architecture. This recipes defaults to x64.</string>
 	<key>Identifier</key>
-	<string>io.github.hjuutilainen.download.Blender</string>
+	<string>com.supportplan.autopkg.download.blender</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

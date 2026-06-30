@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Downloads the latest Bambu Suite for Mac by scraping the public Bambu wiki release-notes page (https://wiki.bambulab.com/en/software/bambu-suite/release-notes), which lists the full CDN DMG URL for every release, newest first. This avoids the hardcoded, version-pinned URL that never updates. NOTE: the wiki release-notes page can lag the live bambulab.com download page by roughly one release (the live page is Cloudflare-protected and not machine-readable, so it cannot be scraped). This recipe therefore tracks the latest version PUBLISHED ON THE WIKI, which is the best automatable source available.</string>
+	<string>Downloads the latest Bambu Suite for Mac by scraping the public Bambu wiki release-notes page (https://wiki.bambulab.com/en/software/bambu-suite/release-notes), which lists the full CDN DMG URL for every release, newest first. This avoids the hardcoded, version-pinned URL that never updates. NOTE: the wiki release-notes page can lag the live bambulab.com download page by roughly one release (the live page is Cloudflare-protected and not machine-readable, so it cannot be scraped). This recipe therefore tracks the latest version PUBLISHED ON THE WIKI, which is the best automatable source available. The clean version (e.g. 01.02.02.00) is parsed from the DMG filename via the named (?P&lt;version&gt;...) group and exported as %version% — do NOT read it from the app's Info.plist: CFBundleVersion is the literal build number "1" and CFBundleShortVersionString is prefixed "Bambu Suite " (e.g. "Bambu Suite 01.02.02.00"), both of which break Munki version comparison.</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Bambu Suite for Mac.</string>
 	<key>Identifier</key>
@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>%RELEASE_NOTES_URL%</string>
 				<key>re_pattern</key>
-				<string>(https://public-cdn\.bblmw\.com/general_pkg/prod/setup/[0-9_]+/Bambu_?Suite_Public_(?:MAC|Mac)_[0-9.]+(?:-[0-9a-z]+)?\.dmg)</string>
+				<string>(?P&lt;url&gt;https://public-cdn\.bblmw\.com/general_pkg/prod/setup/[0-9_]+/Bambu_?Suite_Public_(?:MAC|Mac)_(?P&lt;version&gt;[0-9.]+)(?:-[0-9a-z]+)?\.dmg)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 				<key>request_headers</key>
@@ -61,17 +61,6 @@
 				<string>%pathname%/BambuSuite.app</string>
 				<key>requirement</key>
 				<string>identifier "com.bambulab.BambuSuite" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = W7TPX77Z3J</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%pathname%/BambuSuite.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleVersion</string>
 			</dict>
 		</dict>
 	</array>

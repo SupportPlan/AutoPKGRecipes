@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Downloads the latest Bambu Suite for Mac by scraping the public Bambu wiki release-notes page (https://wiki.bambulab.com/en/software/bambu-suite/release-notes), which lists the full CDN DMG URL for every release, newest first. This avoids the hardcoded, version-pinned URL that never updates. NOTE: the wiki release-notes page can lag the live bambulab.com download page by roughly one release (the live page is Cloudflare-protected and not machine-readable, so it cannot be scraped). This recipe therefore tracks the latest version PUBLISHED ON THE WIKI, which is the best automatable source available.</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Bambu Suite for Mac.</string>
+	<key>Identifier</key>
+	<string>com.supportplan.autopkg.download.BambuSuite</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>BambuSuite</string>
+		<key>RELEASE_NOTES_URL</key>
+		<string>https://wiki.bambulab.com/en/software/bambu-suite/release-notes</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%RELEASE_NOTES_URL%</string>
+				<key>re_pattern</key>
+				<string>(https://public-cdn\.bblmw\.com/general_pkg/prod/setup/[0-9_]+/Bambu_?Suite_Public_(?:MAC|Mac)_[0-9.]+(?:-[0-9a-z]+)?\.dmg)</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+				<key>request_headers</key>
+				<dict>
+					<key>User-Agent</key>
+					<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:152.0) Gecko/20100101 Firefox/152.0</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%url%</string>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/BambuSuite.app</string>
+				<key>requirement</key>
+				<string>identifier "com.bambulab.BambuSuite" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = W7TPX77Z3J</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/BambuSuite.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleVersion</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

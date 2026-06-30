@@ -3,17 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Vectorworks 2020 Installer and imports it into Munki.</string>
+	<string>Downloads the latest version of Redshift and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.munki.Vectorworks2020Installer</string>
+	<string>com.supportplan.munki.Redshift</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Maxon Redshift Installer</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Vectorworks 2020 Installer</string>
+		<string>Redshift</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,11 +23,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Industry standard CAD program.</string>
+			<string>Astronomy education for exploring our galaxy.</string>
 			<key>developer</key>
-			<string>Vectorworks, Inc.</string>
+			<string>Maxon Computer GmbH</string>
 			<key>display_name</key>
-			<string>Vectorworks 2020 Installer</string>
+			<string>Redshift</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,9 +35,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.download.Vectorworks2020Installer</string>
+	<string>com.supportplan.download.Redshift</string>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -3,29 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.4.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Vectorworks 2022 Installer and imports it into Munki.</string>
+	<string>Downloads the latest version of Strawberry Client and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.munki.Vectorworks2022Installer</string>
+	<string>com.supportplan.munki.StrawberryClient</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Vectorworks 2022 Installer</string>
+		<string>Strawberry Client</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Strawberry Client.app</string>
+				<string>mount_pamfs.app</string>
+				<string>QtWebEngineProcess.app</string>
+				<string>pamfs.app</string>
+			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Industry standard CAD program.</string>
+			<string>Music Player and Collection Manager.</string>
 			<key>developer</key>
-			<string>Vectorworks, Inc.</string>
+			<string>Projective Technology GmbH</string>
 			<key>display_name</key>
-			<string>Vectorworks 2022 Installer</string>
+			<string>Strawberry Client</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,9 +40,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.download.Vectorworks2022Installer</string>
+	<string>com.supportplan.download.StrawberryClient</string>
 	<key>Process</key>
 	<array>
 		<dict>

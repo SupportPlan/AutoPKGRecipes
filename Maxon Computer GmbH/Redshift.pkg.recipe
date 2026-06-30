@@ -3,20 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Vectorworks 2022 Installer and creates a package.</string>
+	<string>Downloads the latest version of Redshift and creates a package.</string>
 	<key>Identifier</key>
-	<string>supportplan.pkg.Vectorworks2022Installer</string>
+	<string>com.supportplan.pkg.Redshift</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Maxon Redshift Installer</string>
 		<key>NAME</key>
-		<string>Vectorworks 2022 Installer</string>
+		<string>Redshift</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.download.Vectorworks2022Installer</string>
+	<string>com.supportplan.download.Redshift</string>
 	<key>Process</key>
 	<array>
 		<dict>

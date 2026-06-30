@@ -3,18 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Vectorworks 2021 Installer.</string>
+	<string>Downloads the latest version of Redshift.</string>
 	<key>Identifier</key>
-	<string>supportplan.download.Vectorworks2021Installer</string>
+	<string>com.supportplan.download.Redshift</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Maxon Redshift Installer</string>
 		<key>NAME</key>
-		<string>Vectorworks 2021 Installer</string>
+		<string>Redshift</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -23,7 +25,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://release.vectorworks.net/latest/Vectorworks/2021-NNA-eng-mac</string>
+				<string>https://installer.maxon.net/installer/rs/redshift_2026.6.2_2518604743_macos.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -36,9 +38,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/Vectorworks 2021 Installer.app</string>
+				<string>%pathname%/Maxon Redshift Installer.app</string>
 				<key>requirement</key>
-				<string>identifier "net.vectorworks.2021.vectorworksinstaller" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = LFNG3Q6WX2</string>
+				<string>identifier "net.maxon.redshift.installer" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "4ZY22YGXQG"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -47,7 +49,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/Vectorworks 2021 Installer.app/Contents/Info.plist</string>
+				<string>%pathname%/Maxon Redshift Installer.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>

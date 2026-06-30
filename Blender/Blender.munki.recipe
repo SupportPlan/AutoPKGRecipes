@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.4.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Vectorworks 2021 Installer and imports it into Munki.</string>
+	<string>Downloads the latest version of Blender and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>supportplan.munki.Vectorworks2021Installer</string>
+	<string>com.supportplan.autopkg.munki.Blender</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Vectorworks 2021 Installer</string>
+		<string>Blender</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,11 +21,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Industry standard CAD program.</string>
+			<string>3D animation, modeling, and rendering app.</string>
 			<key>developer</key>
-			<string>Vectorworks, Inc.</string>
+			<string>Stichting Blender Foundation</string>
 			<key>display_name</key>
-			<string>Vectorworks 2021 Installer</string>
+			<string>Blender</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,9 +33,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>supportplan.download.Vectorworks2021Installer</string>
+	<string>com.supportplan.autopkg.download.Blender</string>
 	<key>Process</key>
 	<array>
 		<dict>
